@@ -4,20 +4,14 @@
 # (так же можете сами придумать и добавить вывод сообщения в зависимости от возраста)
 
 while True:
-    a = int(input('Введите ваш возраст: '))
-    if a >= 18:
+    age = (input('Введите ваш возраст: '))
+    if not age or not age.isdigit():
+        continue
+    if int(age) >= 18:
         print('Замечательно. Вы уже можете водить автомобиль')
-        pause = str(input('Продолжим [Y/N]: '))
-        if pause == 'Y':
-            print()
-        else:
-            print()
-            break
     else:
         print('К сожалению, водить автомобиль Bам рановато')
-        pause1 = str(input('Продолжим [Y/N]: '))
-        if pause1 == 'Y':
-            print()
-        else:
-            print()
-            break
+
+    answer = input('Продолжим? [Y/N]')
+    if answer.lower() == 'n':
+        break

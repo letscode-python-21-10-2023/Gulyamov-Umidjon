@@ -8,12 +8,14 @@ import random
 print('Python: Привет, как вас зовут?')
 name = input('ваше имя: ')
 print(f'Что ж {name}, я загадываю число от 1 до 5')
-num = (random.randrange(1,6))
+num = (random.randrange(1, 6))
+cnt = 0
 while True:
+    cnt += 1
     print('Попробуй угадать')
-    your_num  = int(input())
+    your_num = int(input())
     if num == your_num:
-        print('Отлично, вы угадали число!')
+        print(f'Отлично, вы угадали число! Вы справились за {cnt} попыток')
         break
     elif your_num - num >= 2:
         print('Ваше число слишком большое')

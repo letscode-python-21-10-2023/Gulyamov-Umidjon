@@ -2,4 +2,4 @@
 пользователя и затем выдает результат. (решите с помощью генератора списка)"""
 user_example = input('Введите пример со сложением: ')
 num_list = [int(number) for number in user_example.split(' + ')]
-print(sum(num_list))
+print(f'Сумма чисел: {sum(num_list)}')
